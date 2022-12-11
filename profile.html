@@ -1,0 +1,89 @@
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Login Page </title>
+<style> 
+body  {
+  background-image: url("https://r1.ilikewallpaper.net/iphone-wallpapers/download/74785/Early-Morning-iphone-wallpaper-ilikewallpaper_com.jpg");
+  background-color: #964B00;
+}
+button { 
+       background-color: #BF00FF; 
+       width: 100%;
+        color: black; 
+        padding: 15px; 
+        margin: 10px 0px; 
+        border: none; 
+        cursor: pointer; 
+         } 
+ form { 
+        borde1r: 3px solid #f1f1f1; 
+    } 
+ input[type=text], input[type=password] { 
+        width: 100%; 
+        margin: 10px 0px;
+        padding: 12px 20px; 
+        display: inline-block; 
+        border: 2px solid black; 
+        box-sizing: border-box; 
+    }
+ button:hover { 
+        opacity: 0.7; 
+    } 
+  .cancelbtn { 
+        width: auto; 
+        padding: 10px 18px;
+        margin: 10px 5px;
+    } 
+      
+   
+ .containerss { 
+        padding: 25px; 
+        background-color: lightblue;
+    } 
+</style> 
+</head> <body>
+<center><h1>Welcome</h1></center> 
+<h1 id="time"></h1>
+<div id="result"></div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+        <center><a href="home.html">KE HALAMAN UTAMA</a></center>
+    
+<script>
+    const params = new URLSearchParams(window.location.search);
+   
+    var result = '';
+    for (const [key, value] of params) {
+        result += (value);
+    }
+
+    document.getElementById("result").innerHTML = result; 
+
+const time = new Date().getHours();
+let greeting;
+if (time < 10) {
+  greeting = "Selamat Pagi";
+} else if (time < 20) {
+  greeting = "Selamat Sore";
+} else {
+  greeting = "Selamat Malam";
+}
+document.getElementById("time").innerHTML = greeting;
+</script>
+   
+
+
+ 
+</body></html>
